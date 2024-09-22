@@ -211,3 +211,37 @@ audio {
 .progress:focus {
     outline: none;
 }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    filter: invert(1);
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-end {
+    display: flex;
+}
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.github-link {
+    text-decoration: none;
+    display: flex;
+    margin-right: 24px;
+    font-size: 0;
+}
+
+.rsschool-link {
+    text-decoration: none;
+    font-size: 0;
+}
