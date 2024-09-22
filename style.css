@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+audio {
+    display: none;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.main-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+    overflow: hidden;
+}
+
+.cover {
+    width: 100%;
+    height: 250px;
+    overflow: hidden
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.cover-img.pause {
+    transform: scale(1.1);
+}
+
+.info-conatiner {
+    padding: 15px 25px 5px;
+    width: 100%;
+    background: -webkit-linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
+}
+
+.controls-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: url('./assets/svg/play.png') 0 0 no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    filter: invert(1);
+    transition: all .3s ease-in-out;
+}
+
+.play.pause {
+    background: url('./assets/svg/pause.png') 0 0 no-repeat;
+    background-size: contain;
+}
+
+.play:hover {
+    opacity: 0.7;
+}
+
+.info {
+    padding: 0 10px;
+}
+
+.author {
+    color: rgb(193, 255, 6);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.song {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.player-controls {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.play-prev {
+    width: 30px;
+    height: 30px;
+    border: navy;
+    background: url('./assets/svg/backward.png') 0 0 no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    filter: invert(1);
+    transition: all .3s ease-in-out;
+}
+
+.play-prev:hover {
+    opacity: 0.7;
+}
+
+.play-next {
+    width: 30px;
+    height: 30px;
+    border: navy;
+    background: url('./assets/svg/forward.png') 0 0 no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    filter: invert(1);
+    transition: all .3s ease-in-out;
+}
+
+.play-next:hover {
+    opacity: 0.7;
+}
+
+.progress-container {
+    position: relative;
+    padding: 15px 30px;
+}
+
+.end-time {
+    text-align: end;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    color: rgb(193, 255, 6);
+}
+
+.current-time {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    color: white;
+}
+
+.progress {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #000000;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    margin-left: 0px;
+    height: 10px;
+    width: 7px;
+    border: 0;
+    background: -webkit-linear-gradient(45deg, rgb(213, 213, 213), rgb(193, 255, 6));
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.progress::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    max-height: 5px;
+    border-radius: 30px;
+}
+
+.progress:focus {
+    outline: none;
+}
